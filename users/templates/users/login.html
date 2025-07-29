@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Login - Netfix{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2 class="text-center">Login</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <p class="text-center mt-3">
+        Don't have an account? <a href="{% url 'users:register' %}">Register here</a>
+    </p>
+</div>
+{% endblock %}

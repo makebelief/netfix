@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Profile - Netfix{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2 class="text-center">Profile</h2>
+    <div class="profile-info">
+        <p><strong>Username:</strong> {{ user.username }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Phone:</strong> {{ user.phone_number|default:"Not provided" }}</p>
+        <p><strong>Address:</strong> {{ user.address|default:"Not provided" }}</p>
+        <p><strong>Member since:</strong> {{ user.date_joined|date:"F j, Y" }}</p>
+    </div>
+</div>
+{% endblock %}
