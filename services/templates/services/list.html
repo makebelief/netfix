@@ -1,0 +1,43 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+    Services List
+{% endblock %}
+
+{% block content %}
+    <p class="title">Services</p>
+
+    {% if user.is_authenticated and user.is_company %}
+        <div class="create-service-container">
+            <form action="/services/create" method="get">
+                <button type="submit" class="create_service">Create Service</button>
+            </form>
+        </div>
+    {% endif %}
+
+    <div class="services_list">
+        {% if services %}
+            {% for service in services.all %}
+                <div style="display: ruby;">
+                    <div class="service_list_info">
+                        <li>
+                            <a href="/services/{{ service.id }}">
+                                {{ service.name }}  
+                                <pre>{{ service.description }}</pre>
+                            </a> ({{ service.field }}) -- {{ service.price_hour }}€/hour
+                        </li>
+                    </div>
+                    <p style="display: block; margin: 0; float: right; font-size: small; margin-right: 30px;">
+                        by <a href="/company/{{ service.company.user }}">{{ service.company.user }}</a>
+                    </p>
+                </div>
+                
+                {% if forloop.counter != services.all|length %}
+                    <div class="line"></div>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <h2>Sorry, no services available yet.</h2>
+        {% endif %}
+    </div>
+{% endblock %}
