@@ -1,7 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-from .models import Service
-from .request_service import RequestService
+from .models import Service, RequestService
 from .forms import RequestServiceForm
 
 def service_list(request):
