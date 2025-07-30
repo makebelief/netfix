@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Service
-from .request_service import RequestService
+from .models import Service, RequestService
 
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):
