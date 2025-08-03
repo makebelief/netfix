@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netfix - Network Services Platform</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header img {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        .features, .prerequisites, .installation {
+            margin-bottom: 30px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        pre {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .contact {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="css/logo.png" alt="Netfix Logo">
+        <h1>Netfix</h1>
+        <p>A Django-based web application for managing network services and user requests.</p>
+    </div>
+
+    <div class="description">
+        <h2>Description</h2>
+        <p>Netfix is a web application built with Django that provides a platform for managing network services and user requests. The application includes user authentication, service management, and request handling features.</p>
+    </div>
+
+    <div class="features">
+        <h2>Features</h2>
+        <ul>
+            <li>User registration and authentication</li>
+            <li>Service management</li>
+            <li>Request handling</li>
+            <li>Static file serving</li>
+            <li>Responsive design</li>
+        </ul>
+    </div>
+
+    <div class="prerequisites">
+        <h2>Prerequisites</h2>
+        <ul>
+            <li>Python 3.x</li>
+            <li>pip (Python package installer)</li>
+            <li>make (for using Makefile commands)</li>
+        </ul>
+    </div>
+
+    <div class="installation">
+        <h2>Installation and Setup</h2>
+        <ol>
+            <li>Clone the repository:
+                <pre>git clone https://learn.zone01kisumu.ke/git/svictor/netfix.git
+cd netfix</pre>
+            </li>
+            <li>Set up a virtual environment:
+                <pre>python3 -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`</pre>
+            </li>
+            <li>Install dependencies and run migrations:
+                <pre>make all</pre>
+            </li>
+        </ol>
+    </div>
+
+    <div class="contact">
+        <h2>Contact</h2>
+        <ul>
+            <li>Shayo Victor</li>
+            <li>Platform: Zone01 Kisumu</li>
+            <li>Repository: <a href="https://learn.zone01kisumu.ke/git/svictor/netfix">https://learn.zone01kisumu.ke/git/svictor/netfix</a></li>
+        </ul>
+    </div>
+</body>
+</html>
