@@ -1,0 +1,29 @@
+{% extends 'main/base.html' %} 
+
+{% block title %} NetFix {% endblock %} 
+
+{% block content %}
+<div style="margin-top: 50px">
+  <p class="site_title">NetFix</p>
+  <img class="home_logo" src="static/css/logo.png" alt="logo" />
+</div>
+<div>
+  <h1 class="title">Most Requested Services</h1>
+  <ul class="service_list">
+    {% for service in services %}
+    <div>
+      <a href="/services/{{service.service.id}}">{{service.service.name}}</a>
+      ({{service.service.field}})
+      <p style="margin: 0; display: inline-block">❱❱ {{service.service.price_hour}}</p>
+      <p style="float: right; margin: 0">
+        by
+        <a href="/company/{{service.service.company.user}}"
+          >{{service.service.company.user}}</a
+        >
+      </p>
+    </div>
+    <div class="line"></div>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
