@@ -1,18 +1,30 @@
-{% extends 'base/base.html' %}
-
-{% block title %}Request {{ service.name }} - Netfix{% endblock %}
+{% extends 'main/base.html' %}
+{% block title %}
+    Request Service
+{% endblock %}
 
 {% block content %}
-<div class="card">
-    <h2>Request Service: {{ service.name }}</h2>
-    <div class="service-info mb-3">
-        <p>{{ service.description }}</p>
-        <p class="price"><strong>Price:</strong> ${{ service.price }}</p>
-    </div>
-    <form method="post">
+    <p class="title">Service Request Details</p>
+
+    {% if messages %}
+        {% for message in messages %}
+            <p class="error_message">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+
+    <form method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Submit Request</button>
+        
+        <div class="mb-3">
+            {{ form.address.label_tag }}
+            {{ form.address }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.hours.label_tag }}
+            {{ form.hours }}
+        </div>
+
+        <button type="submit">Request</button>
     </form>
-</div>
 {% endblock %}
