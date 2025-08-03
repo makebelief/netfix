@@ -12,55 +12,84 @@
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
+            color: #333;
+            background-color: #f8f9fa;
         }
         .header {
             text-align: center;
             margin-bottom: 40px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .header img {
             max-width: 200px;
             margin-bottom: 20px;
         }
-        .features, .prerequisites, .installation {
-            margin-bottom: 30px;
+        .content-section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        h1, h2 {
+        h1 {
             color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #3498db;
+            margin-top: 0;
         }
         ul {
             padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
         }
         code {
             background: #f5f5f5;
             padding: 2px 5px;
             border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
         }
         pre {
             background: #f5f5f5;
             padding: 15px;
             border-radius: 5px;
             overflow-x: auto;
+            border: 1px solid #ddd;
         }
         .contact {
             margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="css/logo.png" alt="Netfix Logo">
+        <img src="assets/logo.png" alt="Netfix Logo">
         <h1>Netfix</h1>
         <p>A Django-based web application for managing network services and user requests.</p>
     </div>
 
-    <div class="description">
+    <div class="content-section">
         <h2>Description</h2>
         <p>Netfix is a web application built with Django that provides a platform for managing network services and user requests. The application includes user authentication, service management, and request handling features.</p>
     </div>
 
-    <div class="features">
+    <div class="content-section">
         <h2>Features</h2>
         <ul>
             <li>User registration and authentication</li>
@@ -71,7 +100,7 @@
         </ul>
     </div>
 
-    <div class="prerequisites">
+    <div class="content-section">
         <h2>Prerequisites</h2>
         <ul>
             <li>Python 3.x</li>
@@ -80,7 +109,7 @@
         </ul>
     </div>
 
-    <div class="installation">
+    <div class="content-section">
         <h2>Installation and Setup</h2>
         <ol>
             <li>Clone the repository:
