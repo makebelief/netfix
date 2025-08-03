@@ -1,11 +1,10 @@
 from django.urls import path
 from . import views
 
-app_name = 'services'
-
 urlpatterns = [
-    path('', views.service_list, name='service_list'),
-    path('<int:service_id>/', views.service_detail, name='service_detail'),
-    path('request/<int:service_id>/', views.request_service, name='request_service'),
-    path('my-requests/', views.my_requests, name='my_requests'),
+    path('', views.service_list, name='services_list'),
+    path('create/', views.create, name='services_create'),
+    path('<int:id>/', views.index, name='index'),
+    path('<int:id>/request_service/', views.request_service, name='request_service'),
+    path('<slug:field>/', views.service_field, name='services_field'),
 ]
