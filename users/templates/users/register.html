@@ -1,17 +1,23 @@
-{% extends 'base/base.html' %}
-
-{% block title %}Register - Netfix{% endblock %}
+{% extends 'main/base.html' %} 
+{% block title %}
+  User Type
+{% endblock %}
 
 {% block content %}
-<div class="card">
-    <h2 class="text-center">Register</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Register</button>
-    </form>
-    <p class="text-center mt-3">
-        Already have an account? <a href="{% url 'users:login' %}">Login here</a>
-    </p>
-</div>
+  <p class="choice_text">Are you a customer seeking a service or a company providing a service?</p>
+  
+  <div style="margin-top: 70px; text-align: center;">
+      <div class="choice" style="display: inline-block; margin: 0 20px;">
+          <button type="button" onclick="window.location.href='/register/company';" style="padding: 20px 40px; font-size: 24px; border-radius: 8px;   border: 2px solid #2471a3;">
+              Company
+          </button>
+      </div>
+
+      <div class="choice" style="display: inline-block; margin: 0 20px;">
+          <button type="button" onclick="window.location.href='/register/customer';" style="padding: 20px 40px; font-size: 24px; border-radius: 8px; border: 2px solid #2471a3;
+">
+              Customer
+          </button>
+      </div>
+  </div>
 {% endblock %}
